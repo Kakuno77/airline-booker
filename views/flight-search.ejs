@@ -1,0 +1,25 @@
+<!-- views/flight-search.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Reservation - Flight Search</title>
+</head>
+<body>
+    <h1>Flight Search</h1>
+    <form action="/flight-search-results" method="get">
+        <label for="from">From:</label>
+        <input type="text" name="from" id="from" required>
+        <br>
+        <label for="to">To:</label>
+        <input type="text" name="to" id="to" required>
+        <br>
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" required>
+        <br>
+        <button type="submit">Search Flights</button>
+    </form>
+</body>
+</html>

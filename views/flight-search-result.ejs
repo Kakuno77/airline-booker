@@ -1,0 +1,24 @@
+<!-- views/flight-search-results.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline Reservation - Flight Search Results</title>
+</head>
+<body>
+    <h1>Flight Search Results</h1>
+    <ul>
+        <% flights.forEach(flight => { %>
+            <li>
+                <strong>From:</strong> <%= flight.from %><br>
+                <strong>To:</strong> <%= flight.to %><br>
+                <strong>Price:</strong> $<%= flight.price %><br>
+                <strong>Date:</strong> <%= flight.date %><br>
+                <a href="/booking?flightId=<%= flight.id %>">Book this Flight</a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
